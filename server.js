@@ -1,10 +1,19 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
+// Import the sitemap route
 const sitemapRoute = require('./routes/sitemape');
-app.use('/', sitemapRoute);
 
+// Use the sitemap route
+app.use('/sitemap', sitemapRoute);
+
+// ✅ Default route for base URL
+app.get('/', (req, res) => {
+  res.send('Server is running! Go to /sitemap to view the sitemap.');
+});
+
+// Start server
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
