@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // Import the sitemap route
-const sitemapRoute = require('./routes/sitemape');
+const sitemapRoute = require('./routes/sitemap');
 
 // Use the sitemap route
 app.use('/', sitemapRoute);
