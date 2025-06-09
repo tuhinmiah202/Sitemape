@@ -5,7 +5,7 @@ const app = express();
 const sitemapRoute = require('./routes/sitemape');
 
 // Use the sitemap route
-app.use('/sitemap', sitemapRoute);
+app.use('/', sitemapRoute);
 
 // ✅ Default route for base URL
 app.get('/', (req, res) => {
