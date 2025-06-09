@@ -26,4 +26,4 @@ router.get('/sitemap.xml', (req, res) => {
   res.send(xml);
 });
 
-module.exports = ro
+module.exports = router;
